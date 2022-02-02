@@ -1,0 +1,37 @@
+
+    <script>
+
+        const textoObtenido = "ESTe TexTo Lo IngraSA EL USUARIO";
+
+        function changeCapitalLetter(textoAcambiar){ /* Funcion que recibe texto y en mayuscula o minuscula y la cambia a primera mayuscula y todas minusculas*/
+
+            const textoMinusculas = textoAcambiar.toLowerCase(); /* recibe texto y cambia a minuscula*/
+            const textoLength = textoAcambiar.length; /* obtiene la longitud del texto ingresado*/
+            const textoSlice = textoMinusculas.slice(1,textoLength);/* obtiene la primera letra en minuscula*/ 
+
+            const primeraLetra = textoMinusculas.charAt(0);
+            const primeraLetraMayus = primeraLetra.toUpperCase();
+            const textoArreglado = primeraLetraMayus.concat(textoSlice);
+            console.log(`Texto Ingresado por usuario: ${textoAcambiar}`);
+            console.log(`Texto modificado al pasar por funcion: ${textoArreglado}`);
+            return textoArreglado;
+        }
+
+        const textoArregladoFunc = changeCapitalLetter(textoObtenido);
+        console.log(textoArregladoFunc);
+
+        const nuevoTexto = "Programar es facil, divertido y tedioso";
+
+        function lastLetter(textoObtenido){
+
+            const textoObtLength = textoObtenido.length;
+            const ultimaLetra = textoObtenido.slice(textoObtLength-1,textoObtLength);
+            console.log(`Este texto se introdujo: ${textoObtenido}`);
+            console.log(`La ultima letra de la frase es: ${ultimaLetra}`);
+        }
+
+       /* lastLetter(nuevoTexto);*/
+
+            lastLetter("abcd");
+
+        </script>
